@@ -6,7 +6,6 @@ const {
   apiKey,
   apiUrl,
 } = require("../config/constants");
-require('./bcrypt')
 
 const league_id = 566;
 

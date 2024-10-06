@@ -5,10 +5,7 @@
   "type": "module",
   "scripts": {
     "prepare": "cd server && npm install",
-    "dev": "concurrently \"npm run server\" \"npm run ui\"",
-    "start": "concurrently \"npm run server\" \"npm run ui\"",
-    "server": "node ./server/index.js",
-    "ui": "vite",
+    "start": "concurrently \"node ./server/index.js\" \"vite\"",
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

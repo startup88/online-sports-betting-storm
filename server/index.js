@@ -12,6 +12,7 @@ const roundRouter = require("./routers/rounds");
 
 const matches = require("./API_requests/matches");
 // const rounds = require("./API_requests/rounds");
+const { sendEmail } = require("./helpers/mailer.js");
 
 // const secret = require('./auth/secret')
 
@@ -114,6 +115,7 @@ app.use("/", authRouter);
 app.use("/rounds", roundRouter);
 
 app.listen(PORT, () => {
+  sendEmail();
   console.log(`Listening on port: ${PORT}`);
 });
 
